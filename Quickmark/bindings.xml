@@ -1,0 +1,8 @@
+<Bindings>
+	<Binding name="Mark Pack" header="QUICKMARK">
+		Quickmark:markPack()
+	</Binding>
+	<Binding name="Clear Icons" header="QUICKMARK">
+		Quickmark:ClearRaidTargets()
+	</Binding>
+</Bindings>

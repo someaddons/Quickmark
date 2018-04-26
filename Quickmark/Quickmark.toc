@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: Quickmark|cFF0000FF 1.5
+## SavedVariables:QM_TargetData,QM_GroupData,QM_Options,QM_SortedViewList
+## Notes: Remembers set raidmarks and easily marks packs
+Quickmark.lua
+Quickmark.xml
+# By Tarina

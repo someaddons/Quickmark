@@ -1,0 +1,1382 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+  ..\FrameXML\UI.xsd">
+
+<Script file = "Quickmark.lua"/>
+
+	-- Template for Creature entries
+	<Button name="QuickmarkItemButtonTemplate" virtual="true" hidden ="true">
+		<Size>
+			<AbsDimension x="270" y="16"/>
+		</Size>
+		<Frames>
+			<Frame name="$parentRaid8" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="10" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.75" right="1" top="0.25" bottom="0.5" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>			
+			<Frame name="$parentRaid7" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="26" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.5" right="0.75" top="0.25" bottom="0.5" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentRaid6" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="42" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.25" right="0.5" top="0.25" bottom="0.5" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentRaid5" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="58" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.25" top="0.25" bottom="0.5" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentRaid4" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="74" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.75" right="1" top="0" bottom="0.25" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentRaid3" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="90" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.5" right="0.75" top="0" bottom="0.25" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentRaid2" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="106" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.25" right="0.5" top="0" bottom="0.25" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+			<Frame name="$parentRaid1" inherits="QuickmarkListIconTemplate" justifyH="RIGHT">
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset>
+							<AbsDimension x="122" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.25" top="0" bottom="0.25" />
+						</Texture>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+				Quickmark.Frames[this:GetName()] = this;
+				Quickmark.Frames[this:GetName().."Name"] = getglobal(this:GetName().."Name");
+			</OnLoad>
+			<OnClick>
+				Quickmark["SelectTarget"]();
+			</OnClick>
+			<OnEnter>
+				GameTooltip:SetOwner(this, "ANCHOR_BOTTOMLEFT");
+				Quickmark:buildStatTooltip(this:GetName())
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide()
+			</OnLeave>
+		</Scripts>
+
+		<HighlightTexture alphaMode="ADD" file="Interface\QuestFrame\UI-QuestTitleHighlight"/>
+
+		<Layers>
+			<Layer level="BORDER">
+
+
+				<FontString name="$parentName" inherits="GameFontNormalSmall" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="270" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="10" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+	
+				<FontString name="$parentLevel" inherits="GameFontHighlightSmall" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="20" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentName" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentClass" inherits="GameFontHighlightSmall" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="82" y="8"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentLevel" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="3" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="$parentGroup" inherits="GameFontHighlightSmall" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="100" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentClass" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="-2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+				<FontString name="$parentKills" inherits="GameFontHighlightSmall" justifyH="CENTER">
+					<Size>
+						<AbsDimension x="50" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentGroup" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="-2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+
+				<FontString name="$parentLastSeen" inherits="GameFontHighlightSmall" justifyH="LEFT">
+					<Size>
+						<AbsDimension x="60" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeTo="$parentKills" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="-2" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+
+	</Button>
+	
+	-- Template for small icons in list
+	<Frame name="QuickmarkListIconTemplate" virtual="true" hidden="true">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Scripts>
+			<OnLoad>
+				Quickmark.Frames[this:GetName()] = this;
+			</OnLoad>
+			<OnClick>
+			</OnClick>
+			<OnEnter>
+			</OnEnter>
+			<OnLeave>
+			</OnLeave>
+		</Scripts>
+		<HighlightTexture alphaMode="ADD" file="Interface\QuestFrame\UI-QuestTitleHighlight"/>
+	</Frame>
+	
+	-- Template for Big Raid icons
+	<CheckButton name="QuickmarkRaidIconTemplate" inherits="UICheckButtonTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="30" y="30"/>
+		</Size>
+		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+				Quickmark.Frames[this:GetName()] = this;
+			</OnLoad>
+			<OnEnter>
+			</OnEnter>
+			<OnLeave>
+			</OnLeave>
+		</Scripts>
+
+		<HighlightTexture alphaMode="ADD" file="Interface\QuestFrame\UI-QuestTitleHighlight"/>
+
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+					<Size>
+						<AbsDimension x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="-10" y="20"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		
+	</CheckButton>
+
+	<Frame name="QuickmarkFrame" toplevel="true" enableMouse="true" clampedToScreen="true" movable="true" parent="UIParent" hidden="true">
+		<Size>
+			<AbsDimension x="494" y="552"/>
+		</Size>
+		<Anchors>
+ 			<Anchor point="TOPLEFT">
+ 				<Offset>
+ 					<AbsDimension x="0" y="-104"/>
+ 				</Offset>
+ 			</Anchor>
+ 		</Anchors>
+		<HitRectInsets>
+			<AbsInset left="0" right="35" top="0" bottom="75"/>
+		</HitRectInsets>
+		<Layers>
+			<Layer level="BACKGROUND">
+                <Texture name="QuickmarkFramePortrait" file="Interface\Icons\TRADE_ARCHAEOLOGY_HIGHBORNE_SCROLL">
+					<Size>
+						<AbsDimension x="60" y="55"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="8" y="-10"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+                </Texture>
+            </Layer>
+			<Layer level="ARTWORK">
+				<Texture file="Interface\TaxiFrame\UI-TaxiFrame-TopLeft">
+					<Size>
+						<AbsDimension x="256" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\TaxiFrame\UI-TaxiFrame-TopRight">
+					<Size>
+						<AbsDimension x="278" y="256"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativeTo="QuickmarkFrame" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="40" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\TaxiFrame\UI-TaxiFrame-BotLeft">
+					<Size>
+						<AbsDimension x="256" y="306"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativeTo="QuickmarkFrame" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture file="Interface\TaxiFrame\UI-TaxiFrame-BotRight">
+					<Size>
+						<AbsDimension x="278" y="306"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT" relativeTo="QuickmarkFrame" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="40" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<FontString name="QuickmarkTitleText" inherits="GameFontHighlight" text="Quickmark |cFF9383fc 1.5">
+					<Size>
+						<AbsDimension x="300" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOP" relativeTo="QuickmarkFrame" relativePoint="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-15"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString name="QuickmarkGroupText" inherits="GameFontNormal" text="Category">
+					<Size>
+						<AbsDimension x="80" y="14"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame" relativePoint="TOPLEFT">
+							<Offset>
+								<AbsDimension x="70" y="-30"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			
+			<Button name="QM_HELP" hidden="false">
+				<Size>
+					<AbsDimension x="24" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="75" y="-3"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad>
+						LoadMicroButtonTextures("Help");
+					</OnLoad>
+					<OnClick>
+						if QM_HELP_OPTIONS_FRAME:IsVisible() then QM_HELP_OPTIONS_FRAME:Hide() else QM_HELP_OPTIONS_FRAME:Show() end
+					</OnClick>
+					<OnEnter>
+				 	   GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					   GameTooltip:SetText("Help/Options");
+				   </OnEnter>
+				   <OnLeave>
+					   GameTooltip:Hide();
+				   </OnLeave>
+				</Scripts>
+			</Button>
+
+			<Frame name="QM_HELP_OPTIONS_FRAME" toplevel="true" parent="QuickmarkFrame" clampedToScreen="true" inherits="OptionFrameBoxTemplate" movable="false" enableMouse="true" hidden="true" frameStrata="DIALOG">
+				<Size>
+					<AbsDimension x="230" y="600"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="-230" y="-20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString inherits="GameFontHighlightLarge" text="Quickmark Options/Help">
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-10"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString wordwrap="true" justifyH="LEFT" inherits="GameFontNormal" text="Desc: 
+						|nQuickmark is an Addon to quickly mark mobs.To use it you save mob names and the raidmarks you want to set on those. 
+						|nIf you want to mark multiple mobs of the same name then add multiple raidmarks.
+						|nTo not have to enter all mobs manually there is a Record-mode included which gathers mob names and raid icons. Toggle it on/off by clicking the Play icon in the top right corner.
+						|n |nAfter adding the necessary data you can use the addon to mark targets. All marking is done by hovering the mouse over the targets(3d).
+						|nMarking targets can be done in two modes, auto-mark and pack-mark. Auto-mark is permanently active and toggled by the gear symbol on the upper right corner. 
+						|nPack-mark is more controlled than auto-mark and gives you 10s to mouseover the targets to mark, started by:
+						|n -Clicking the +Skull Icon on the top right of the Quickmark window
+						|n -Creating a macro with /run Quickmark:markPack()
+						|n -Binding a Key to it in the Key bindings menu
+						">
+							<Size>
+								<AbsDimension x="210" y="470"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="10" y="-110"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames>
+					<CheckButton name="$ParentMiniMapButton" inherits="OptionsCheckButtonTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="20" y="-50"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								getglobal(this:GetName().."Text"):SetText("Show Minimap Button");
+								</OnLoad>
+							<OnClick>
+								if QM_Options.miniMap == "true" then QM_Options.miniMap = "false" QM_MINIMAPFRAME:Hide() else QM_Options.miniMap = "true" QM_MINIMAPFRAME:Show() end
+							</OnClick>
+						</Scripts>
+					</CheckButton>
+					<CheckButton name="$ParentMarkState" inherits="OptionsCheckButtonTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="20" y="-80"/>
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnLoad>
+								getglobal(this:GetName().."Text"):SetText("Fast marking");
+							</OnLoad>
+							<OnClick>
+								if QM_Options.markType == "fast" then QM_Options.markType="safe" else QM_Options.markType = "fast"  end
+							</OnClick>
+							<OnEnter>
+								GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					  			GameTooltip:SetText("Check to activate Fast marking. \nFast marking doesnt not wait for a server response after requesting a mark on a mob. \nPotentially could skip marks");
+							</OnEnter>
+							<OnLeave>
+								GameTooltip:Hide()
+							</OnLeave>
+						</Scripts>
+					</CheckButton>
+				</Frames>
+			</Frame>
+
+			<Button name="QM_PLAY_BUTTON" inherits="UIPanelButtonTemplate" hidden="false">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="-110" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file="Interface\AddOns\Quickmark\Images\play"/>
+				<Scripts>
+					<OnClick>
+						this:Hide()
+						QM_RECORD_BUTTON:Show()
+						Quickmark:StartRecording()
+					</OnClick>
+					<OnEnter>
+				 	   GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					   GameTooltip:SetText("Click to START Recording \n Raid Icons on targets");
+				   </OnEnter>
+				   <OnLeave>
+					   GameTooltip:Hide();
+				   </OnLeave>
+				</Scripts>
+			</Button>
+			<Button name="QM_RECORD_BUTTON" inherits="UIPanelButtonTemplate" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="-110" y="-15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file="Interface\AddOns\Quickmark\Images\recording"/>
+				<Scripts>
+					<OnClick>
+						this:Hide()
+						QM_PLAY_BUTTON:Show()
+						Quickmark.state = "default"
+						Quickmark.recordFrame:SetScript("OnUpdate",nil)
+						Quickmark.recordFrame:SetScript("OnEvent",nil)
+					</OnClick>
+					<OnEnter>
+				 	   GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					   GameTooltip:SetText("Click to STOP Recording \n Raid Icons on targets");
+					</OnEnter>
+					<OnLeave>
+					   GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+			
+			<Button name="QM_MARK_BUTTON" inherits="UIPanelButtonTemplate" hidden="false">
+				<Size>
+					<AbsDimension x="42" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="145" y="-16"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file=""/>
+				<PushedTexture file=""/>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentSymbol" file="Interface\TargetingFrame\UI-RaidTargetingIcons" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="LEFT">
+									<Offset>
+										<AbsDimension x="21" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords top="0.25" left="0.75" bottom="0.5" right="1"/>
+						</Texture>
+					</Layer>
+					<Layer level="ARTWORK">	
+						<Texture name="$parentSymbol2" file="Interface\AddOns\Quickmark\Images\plusg" hidden="false">
+							<Size>
+								<AbsDimension x="16" y="16"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="LEFT">
+									<Offset>
+										<AbsDimension x="5" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						Quickmark:markPack()
+					</OnClick>
+					<OnEnter>
+				 	   GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					   GameTooltip:SetText("Click to START pack marking for 10s");
+					</OnEnter>
+					<OnLeave>
+					   GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+
+			<Button name="QM_MARK_INACTIVE" inherits="UIPanelButtonTemplate" hidden="false">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="-130" y="-16"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file="Interface\AddOns\Quickmark\Images\gearw32"/>
+				<Scripts>
+					<OnClick>
+						this:Hide()
+						QM_MARK_ACTIVE:Show()
+						
+						QM_PLAY_BUTTON:Show()
+						
+						Quickmark:StartAutoMark()
+					</OnClick>
+					<OnEnter>
+				 	   GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					   GameTooltip:SetText("Click to START auto marking mouseover/target \n with Raid Icons");
+				   </OnEnter>
+				   <OnLeave>
+					   GameTooltip:Hide();
+				   </OnLeave>
+				</Scripts>
+			</Button>
+			<Button name="QM_MARK_ACTIVE" inherits="UIPanelButtonTemplate" hidden="true">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="-130" y="-16"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file="Interface\AddOns\Quickmark\Images\gearw_active32"/>
+				<Scripts>
+					<OnClick>
+						this:Hide()
+						QM_MARK_INACTIVE:Show()
+						Quickmark.state = "default"
+					</OnClick>
+					<OnEnter>
+				 	   GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					   GameTooltip:SetText("Click to STOP auto marking mouseover/target \n with Raid Icons");
+					</OnEnter>
+					<OnLeave>
+					   GameTooltip:Hide();
+					</OnLeave>
+				</Scripts>
+			</Button>
+			
+			<Button name="QM_CloseButton" inherits="UIPanelCloseButton">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="QuickmarkFrame" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-39" y="-8"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+		
+			<EditBox name="QM_TargetEditBox" letters="256" historyLines="0" autoFocus="false" ignoreArrows="true" FontHeight="20">
+				<Size>
+					<AbsDimension x="250" y="40"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="34" y="97"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+				
+					<Layer level="BACKGROUND">
+						<Texture name="$parentLeft" file="Interface\ClassTrainerFrame\UI-ClassTrainer-FilterBorder">
+							<Size>
+								<AbsDimension x="12" y="40"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="-11" y="-5"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.09375" top="0" bottom="1.0"/>
+						</Texture>
+						<Texture name="$parentMiddle" file="Interface\ClassTrainerFrame\UI-ClassTrainer-FilterBorder">
+							<Size>
+								<AbsDimension x="250" y="40"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT"/>
+							</Anchors>
+							<TexCoords left="0.09375" right="0.90625" top="0" bottom="1.0"/>
+						</Texture>
+						<Texture name="$parentRight" file="Interface\ClassTrainerFrame\UI-ClassTrainer-FilterBorder">
+							<Size>
+								<AbsDimension x="12" y="40"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="$parentMiddle" relativePoint="RIGHT"/>
+							</Anchors>
+							<TexCoords left="0.90625" right="1.0" top="0" bottom="1.0"/>
+						</Texture>
+						
+					</Layer>
+				</Layers>
+
+				<Scripts>
+					<OnLoad>
+						this:RegisterEvent("PLAYER_TARGET_CHANGED");
+					</OnLoad>
+					<OnEvent>
+						Quickmark["TargetChanged"]();
+					</OnEvent>
+					<OnEscapePressed>
+						this:ClearFocus();
+					</OnEscapePressed>
+					<OnEnterPressed>
+						this:ClearFocus();
+					</OnEnterPressed>
+				</Scripts>
+				<FontString name="$parentFontString" font="Fonts\FRIZQT__.TTF">
+					<FontHeight val="20"/>
+				</FontString>
+			</EditBox>
+			<Button name="QM_TargetConfirmButton" inherits="UIPanelButtonTemplate" text="Add Target" id="1" hidden="false">
+				<Size>
+					<AbsDimension x="130" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="150" y="5"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<HighlightTexture alphaMode="ADD" file="Interface\QuestFrame\UI-QuestTitleHighlight"/> 
+				<Scripts>
+					<OnLoad>
+					</OnLoad>
+					<OnClick>
+						PlaySound("gsCharacterSelection", "master");
+						Quickmark["AddTarget"]();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="QM_TargetRemoveButton" inherits="UIPanelButtonTemplate" text="Remove Target" id="1" hidden="false">
+				<Size>
+					<AbsDimension x="130" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="150" y="40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<HighlightTexture alphaMode="ADD" file="Interface\QuestFrame\UI-QuestTitleHighlight"/> 
+				<Scripts>
+					<OnLoad>
+					</OnLoad>
+					<OnClick>
+						PlaySound("gsCharacterSelection", "master");
+						Quickmark:RemoveTarget()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="QM_AddGroupButton" inherits="UIPanelButtonTemplate" text="Add Category" hidden="false">
+				<Size>
+					<AbsDimension x="100" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="195" y="-40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<HighlightTexture alphaMode="ADD" file="Interface\QuestFrame\UI-QuestTitleHighlight"/> 
+				<Scripts>
+					<OnLoad>
+					</OnLoad>
+					<OnClick>
+						PlaySound("gsCharacterSelection", "master");
+						Quickmark:GroupCreateUI()	
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="QM_RemoveGroupButton" inherits="UIPanelButtonTemplate" text="Remove Category" id="1" hidden="false">
+				<Size>
+					<AbsDimension x="130" y="30"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame" relativePoint="TOPLEFT">
+						<Offset>
+							<AbsDimension x="300" y="-40"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<HighlightTexture alphaMode="ADD" file="Interface\QuestFrame\UI-QuestTitleHighlight"/> 
+				<Scripts>
+					<OnLoad>
+					</OnLoad>
+					<OnClick>
+						PlaySound("gsCharacterSelection", "master");
+						Quickmark:GroupRemoveUI()
+					</OnClick>
+				</Scripts>
+			</Button>
+
+		
+			<Button name="QuickmarkTargetGroupDropDown" inherits="UIDropDownMenuTemplate" text="DROPDOWNTEST">
+				<Size>
+					<AbsDimension x="1" y="1"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="50" y="-45"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+  				   <OnLoad>
+						UIDropDownMenu_Initialize(this,Quickmark["OnOpenGroupDropDown"])
+						UIDropDownMenu_SetWidth(100);
+						UIDropDownMenu_SetButtonWidth(24);
+						UIDropDownMenu_JustifyText("LEFT", this)
+						UIDropDownMenu_SetSelectedName(QuickmarkTargetGroupDropDown, "undefined");
+					</OnLoad>
+				</Scripts>
+			</Button>
+
+			<CheckButton name="QuickmarkRaidIcon8" inherits="QuickmarkRaidIconTemplate" id="1" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="0" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_8"];
+						QuickmarkRaidIcon8Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="QuickmarkRaidIcon7" inherits="QuickmarkRaidIconTemplate" id="2" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="35" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_7"];
+						QuickmarkRaidIcon7Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="QuickmarkRaidIcon6" inherits="QuickmarkRaidIconTemplate" id="3" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="70" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_6"];
+						QuickmarkRaidIcon6Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="QuickmarkRaidIcon5" inherits="QuickmarkRaidIconTemplate" id="4" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="105" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_5"];
+						QuickmarkRaidIcon5Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="QuickmarkRaidIcon4" inherits="QuickmarkRaidIconTemplate" id="5" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="140" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_4"];
+						QuickmarkRaidIcon4Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="QuickmarkRaidIcon3" inherits="QuickmarkRaidIconTemplate" id="6" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="175" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_3"];
+						QuickmarkRaidIcon3Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>
+			<CheckButton name="QuickmarkRaidIcon2" inherits="QuickmarkRaidIconTemplate" id="7" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="210" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_2"];
+						QuickmarkRaidIcon2Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>			
+			<CheckButton name="QuickmarkRaidIcon1" inherits="QuickmarkRaidIconTemplate" id="8" hidden="false">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QM_TargetEditBox">
+						<Offset>
+							<AbsDimension x="245" y="20"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnShow>
+						local t = UnitPopupButtons["RAID_TARGET_1"];
+						QuickmarkRaidIcon1Symbol:SetTexCoord(t.tCoordLeft, t.tCoordRight, t.tCoordTop, t.tCoordBottom);
+					</OnShow>
+				</Scripts>
+			</CheckButton>
+
+			<Button name="QuickmarkItem1" inherits="QuickmarkItemButtonTemplate" id="1" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame">
+						<Offset>
+							<AbsDimension x="19" y="-75"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem2" inherits="QuickmarkItemButtonTemplate" id="2" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem1" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem3" inherits="QuickmarkItemButtonTemplate" id="3" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem2" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem4" inherits="QuickmarkItemButtonTemplate" id="4" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem3" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem5" inherits="QuickmarkItemButtonTemplate" id="5" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem4" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem6" inherits="QuickmarkItemButtonTemplate" id="6" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem5" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem7" inherits="QuickmarkItemButtonTemplate" id="7" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem6" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem8" inherits="QuickmarkItemButtonTemplate" id="8" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem7" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem9" inherits="QuickmarkItemButtonTemplate" id="9" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem8" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem10" inherits="QuickmarkItemButtonTemplate" id="10" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem9" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem11" inherits="QuickmarkItemButtonTemplate" id="11" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem10" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem12" inherits="QuickmarkItemButtonTemplate" id="12" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem11" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem13" inherits="QuickmarkItemButtonTemplate" id="13" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem12" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem14" inherits="QuickmarkItemButtonTemplate" id="14" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem13" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem15" inherits="QuickmarkItemButtonTemplate" id="15" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem14" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem16" inherits="QuickmarkItemButtonTemplate" id="16" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem15" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem17" inherits="QuickmarkItemButtonTemplate" id="17" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem16" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem18" inherits="QuickmarkItemButtonTemplate" id="18" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem17" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem19" inherits="QuickmarkItemButtonTemplate" id="19" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem18" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Button name="QuickmarkItem20" inherits="QuickmarkItemButtonTemplate" id="20" >
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkItem19" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="0" y="1"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+			</Button>
+
+			<ScrollFrame name="QuickmarkListScrollFrame" inherits="FauxScrollFrameTemplate">
+				<Size>
+					<AbsDimension x="296" y="324"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="QuickmarkFrame" relativePoint="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-365" y="-75"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnVerticalScroll>
+						FauxScrollFrame_OnVerticalScroll(16, Quickmark["ScrollUpdate"]);
+					</OnVerticalScroll>
+
+					<OnLoad>
+						Quickmark.Frames[this:GetName()] = this;
+						Quickmark.Frames[this:GetName().."ScrollBar"] = getglobal(this:GetName().."ScrollBar");
+						FauxScrollFrame_Update(this,0,20,16);
+						FauxScrollFrame_SetOffset(this, 0);
+						Quickmark.Frames[this:GetName().."ScrollBar"]:SetValue(0);
+					</OnLoad>
+				</Scripts>
+			</ScrollFrame>
+
+		</Frames>
+		<Scripts>
+            <OnMouseUp>
+                QuickmarkFrame:StopMovingOrSizing();
+            </OnMouseUp>
+            <OnMouseDown>
+                QuickmarkFrame:StartMoving();
+            </OnMouseDown>
+            <OnLoad>
+			   this:RegisterEvent("PLAYER_TARGET_CHANGED")
+			   this:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
+			</OnLoad> 
+			<OnShow>
+				Quickmark:ReloadListItems();
+			</OnShow>
+			<OnHide>
+				QM_HELP_OPTIONS_FRAME:Hide()
+			</OnHide>
+            <OnEvent>
+			   Quickmark:AquireTargetStats(event)
+			</OnEvent> 
+			<OnLeave>
+				QM_TargetEditBox:ClearFocus();
+			</OnLeave>
+		</Scripts>
+
+	</Frame>
+
+	<Frame name="QM_MINIMAPFRAME" parent="Minimap" movable="true" clampedToScreen="true" enableMouse="true" hidden="false" frameStrata="LOW">
+		<Size>
+			<AbsDimension x="32" y="32"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativeTo="Minimap" relativePoint="LEFT">
+				<Offset>
+					<AbsDimension x="0" y="0"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Frames>
+			<Button name="QM_MINIMAPFRAMEBUTTON" movable ="true">
+				<Size>
+					<AbsDimension x="32" y="32"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<NormalTexture file="Interface\AddOns\Quickmark\Images\buttonicon32"/>
+				<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+				<Scripts>
+					<OnClick>
+						QuickmarkFrame:Show()
+					</OnClick>
+				   <OnEnter>
+				 	   GameTooltip:SetOwner(this, "ANCHOR_LEFT");
+					   GameTooltip:SetText("Show Quickmark");
+				   </OnEnter>
+				   <OnLeave>
+					   GameTooltip:Hide();
+				   </OnLeave>
+					<OnMouseDown>
+						if IsControlKeyDown() then this:StartMoving() end
+					</OnMouseDown>
+					<OnMouseUp>
+						this:StopMovingOrSizing();
+					</OnMouseUp>
+				</Scripts>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				 this:RegisterEvent("PLAYER_ENTERING_WORLD")
+			</OnLoad>
+			<OnEvent>
+				Quickmark:OnLoad()
+			</OnEvent>
+		</Scripts>
+	</Frame>
+
+</Ui>
+
