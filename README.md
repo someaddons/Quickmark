@@ -1,6 +1,7 @@
 # Quickmark
-Vanilla addon to assist with quickly marking targets.
+Quickmark is an vanilla addon to assist with quickly marking targets.
 Targets get marked upon mouseover with a previously set Raid Icon.
+This is still a WIP so pls report any bugs/feature ideas.
 
 # Install:
 
