@@ -34,7 +34,7 @@ end
 
 -- triggered after this file is loaded
 function Quickmark:LuaInit()
-QuickMark:DebugMsg("Quickmark Loaded",0)
+Quickmark:DebugMsg("Quickmark Loaded",0)
 end
 
 -- Adding slash commands to the slash table
@@ -45,12 +45,12 @@ function SlashCmdList.QUICKMARK(cmd)
 		else			
 			QuickmarkFrame:Show()
 		end
-		QuickMark:DebugMsg("Quickmark Slash command",3)
+		Quickmark:DebugMsg("Quickmark Slash command",3)
 end
 
 -- Clear Target Markers
 function Quickmark:ClearRaidTargets()
-	QuickMark:DebugMsg("Quickmark:ClearRaidTargets()",3)
+	Quickmark:DebugMsg("Quickmark:ClearRaidTargets()",3)
 	for i = 1,8 do
 		SetRaidTarget("player",i)
 	end
@@ -73,7 +73,7 @@ end
 -- Mark the targets
 function Quickmark:markPack()
 	-- Check if we are already marking
-	if Quickmark.state == "PACK_MARKING" then QuickMark:DebugMsg("Quickmark:markPack() is already marking",1) return end
+	if Quickmark.state == "PACK_MARKING" then Quickmark:DebugMsg("Quickmark:markPack() is already marking",1) return end
 	-- Set Quickmark.state
 	Quickmark.state = "PACK_MARKING"
 	
@@ -90,7 +90,7 @@ function Quickmark:markPack()
 	-- mouseover mark
 	else
 		
-		local f=CreateFrame('Frame',"QuickMarkMarkFrame")
+		local f=CreateFrame('Frame',"QuickmarkMarkFrame")
 		f:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
 		f:RegisterEvent("RAID_TARGET_UPDATE")
 		f:RegisterEvent("OnUpdate")
@@ -129,13 +129,13 @@ function Quickmark:markPack()
 			if GetTime() - this.startTime > 10 then 
 				this:SetScript("OnEvent",nil)
 				this:SetScript("OnUpdate",nil)
-				QuickMark:DebugMsg("Quickmark:markPack() finished",3) 
+				Quickmark:DebugMsg("Quickmark:markPack() finished",3) 
 				Quickmark.state = "default"
 			end
 			if Quickmark.state ~= "PACK_MARKING" then
 				this:SetScript("OnEvent",nil)
 				this:SetScript("OnUpdate",nil)
-				QuickMark:DebugMsg("Quickmark:markPack() canceled, wrong state",2) 
+				Quickmark:DebugMsg("Quickmark:markPack() canceled, wrong state",2) 
 			end
 		end)
 	end
@@ -158,7 +158,7 @@ function Quickmark:markUnit(unit)
 
 			-- Set Mark if not used yet
 			if markExists == 0 then 
-				QuickMark:DebugMsg("Quickmark:markUnit Marked: "..unitName.." with: "..QM_TargetData[unitName]["RaidIcons"][i],1) 
+				Quickmark:DebugMsg("Quickmark:markUnit Marked: "..unitName.." with: "..QM_TargetData[unitName]["RaidIcons"][i],1) 
 				SetRaidTarget(unit,QM_TargetData[unitName]["RaidIcons"][i])
 				usedIcons[QM_TargetData[unitName]["RaidIcons"][i]] = GetTime()
 				return 1
@@ -645,7 +645,7 @@ end
 Quickmark:LuaInit()
 
 -- Debug Functions
-function QuickMark:DebugMsg(msg,level)
+function Quickmark:DebugMsg(msg,level)
 	if QM_Options["debug"] < level then return end
 
 	local t = type(msg)
