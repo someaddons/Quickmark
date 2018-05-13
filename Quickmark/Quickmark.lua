@@ -642,8 +642,6 @@ function Quickmark:ScrollUpdate()
 	Quickmark:ReloadListItems()
 end
 
-Quickmark:LuaInit()
-
 -- Debug Functions
 function Quickmark:DebugMsg(msg,level)
 	if QM_Options["debug"] < level then return end
@@ -660,3 +658,5 @@ function Quickmark:DebugMsg(msg,level)
 
 
 end
+
+Quickmark:LuaInit()
